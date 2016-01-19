@@ -1,0 +1,209 @@
+/*
+Theme Name: LAB Midwest
+Author: Foresite Group
+Author URI: http://foresitegrp.com
+Description: Wordpress theme developed specifically for LAB Midwest.
+Version: 1.0
+*/
+
+/*
+font-family: 'Bitter', serif;
+font-family: 'Titillium Web', sans-serif;
+
+#EBEBEB - lightest gray
+#CCCCCC - light gray
+#ACACAC - gray
+#707070 - dark gray
+#3E6F91 - light blue
+#27465B - blue
+*/
+
+BODY {
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  color: #707070;
+  font-family: 'Bitter', serif;
+  font-size: 16px;
+  line-height: 1.3em;
+}
+
+A:link, A:visited {
+  color: #27465B;
+  text-decoration: none;
+}
+
+A:hover, A:active {
+  color: #707070;
+  text-decoration: none;
+}
+
+H5 {
+  font-size: 17px;
+  line-height: 1em;
+  color: #27465B;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.site-width {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.site-width:after,
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.one-fourth {
+  float: left;
+  width: 22.75%;
+  margin-right: 3%;
+}
+
+.one-half {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+
+.one-third {
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+}
+
+.two-third {
+  float: left;
+  width: 65%;
+  margin-right: 5%;
+}
+
+.one-fourth.last,
+.one-half.last,
+.one-third.last,
+.two-third.last {
+  margin-right: 0;
+}
+
+A.lm-button:link, A.lm-button:visited {
+  color: #3E6F91;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid #CCCCCC;
+  padding: 0.22em 0.9em;
+  display: inline-block;
+}
+
+A.lm-button:hover, A.lm-button:active {
+  color: #707070;
+  border: 2px solid #3E6F91;
+}
+
+.topbar {
+  height: 35px;
+  line-height: 35px;
+  background: #EBEBEB;
+  color: #27465B;
+  font-size: 75%;
+  font-weight: bold;
+  text-align: right;
+}
+
+.topbar .fa-search {
+  color: #ACACAC;
+}
+
+.topbar A:link .fa-facebook-square, A:visited .fa-facebook-square { color: #27465B; }
+.topbar A:link .fa-linkedin-square, A:visited .fa-linkedin-square { color: #0173B1; }
+.topbar A:link .fa-google-plus-square, A:visited .fa-google-plus-square { color: #F63C27; }
+.topbar A:hover .fa, .topbar A:active .fa { color: #707070}
+.topbar A:link .fa-square, A:visited .fa-square { color: #FFFFFF; }
+.topbar A:hover .fa-square, A:active .fa-square { color: #CCCCCC; }
+.topbar A:link .fa, A:visited .fa { font-size: 150%; }
+.topbar .fa-stack {
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  margin: 0 0.4em;
+}
+
+.logo-menu {
+  height: 98px;
+  position: relative;
+}
+
+#logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+#menu-main-menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  float: right;
+}
+
+#menu-main-menu > LI {
+  float: left;
+  line-height: 98px;
+  padding-left: 2.5em;
+  position: relative;
+}
+
+#menu-main-menu > LI:first-child {
+  padding-left: 0;
+}
+
+#menu-main-menu > LI > A {
+  font-size: 106.25%;
+  text-transform: uppercase;
+}
+
+.banner-home {
+  height: 455px;
+  background: #3E6F91;
+  margin-bottom: 52px;
+}
+
+.home-content {
+  font-size: 87.5%;
+  line-height: 1.4em;
+}
+
+.home-content IMG {
+  max-width: 100%;
+  height: auto;
+  margin: 0.7em 0 1.7em;
+}
+
+.home-content A.lm-button {
+  margin-top: 2.7em;
+  font-size: 92.85%;
+}
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+  /* Small computer or landscape tablet */
+  .site-width {
+    width: 94%;
+  }
+
+  .site-width IMG {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .home-content H5 {
+    min-height: 2em;
+  }
+}
