@@ -175,6 +175,7 @@ A.lm-button:hover, A.lm-button:active {
 .home-content {
   font-size: 87.5%;
   line-height: 1.4em;
+  margin-bottom: 2.6em;
 }
 
 .home-content IMG {
@@ -187,6 +188,121 @@ A.lm-button:hover, A.lm-button:active {
   margin-top: 2.7em;
   font-size: 92.85%;
 }
+
+.home-product-video {
+  background: #26455A;
+  position: relative;
+}
+
+.home-video-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 52.2%;
+  height: 100%;
+  background: url(images/home-video.jpg) no-repeat left center;
+  background-size: cover;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.home-featured-product {
+  float: left;
+  width: 46.5%;
+  min-height: 434px;
+  padding: 43px 5% 43px 0;
+  box-sizing: border-box;
+  font-size: 106.25%;
+  line-height: 1.8em;
+  color: #EBEBEB;
+}
+
+.home-featured-product P { margin: 0; }
+
+.home-featured-product H5 {
+  font-size: 105.88%;
+  font-weight: normal;
+  color: #5598C6;
+  margin-bottom: 0.65em;
+}
+
+.home-featured-product H3 {
+  font-size: 223.52%;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0 0 0.45em;
+}
+
+.home-featured-product A.lm-button:link,
+.home-featured-product A.lm-button:visited {
+  color: #FFFFFF;
+  border: 3px solid #3E6F91;
+  font-size: 105.88%;
+  margin: 2.2em 0 0;
+}
+
+.home-featured-product A.lm-button:hover,
+.home-featured-product A.lm-button:active {
+  color: #3E6F91;
+  border: 3px solid #707070;
+}
+
+.home-product-video .site-width {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-video {
+  float: right;
+  width: 53%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.home-video P { margin: 0; }
+
+.home-video A:link,
+.home-video A:visited {
+  border: 8px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+}
+
+.home-video A:hover,
+.home-video A:active {
+  border: 8px solid rgba(255, 255, 255, 0.8);
+}
+
+.home-video A:link .fa-circle,
+.home-video A:visited .fa-circle {
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+.home-video A:hover .fa-circle,
+.home-video A:active .fa-circle {
+  opacity: 1;
+}
+
+.home-video A:link .fa-play,
+.home-video A:visited .fa-play {
+  color: #3E6F91;
+  padding-left: 0.1em;
+}
+
+.home-video A:hover .fa-play,
+.home-video A:active .fa-play {
+  color: #707070;
+  padding-left: 0.1em;
+}
+
+
+
 
 
 
