@@ -21,5 +21,21 @@ function enqueue_and_register_my_scripts(){
   wp_register_script(
     'responsive-lightbox-swipebox', get_stylesheet_directory_uri() . '/inc/jquery.swipebox.min.js', array( 'jquery' )
   );
+  wp_enqueue_script(
+    'match-height', get_stylesheet_directory_uri() . '/inc/jquery.matchHeight-min.js', array( 'jquery' )
+  );
+}
+
+// Home page blog excerpt
+function excerpt($limit) {
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
+  if (count($excerpt)>=$limit) {
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt).'....';
+  } else {
+    $excerpt = implode(" ",$excerpt);
+  } 
+  $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+  return $excerpt;
 }
 ?>

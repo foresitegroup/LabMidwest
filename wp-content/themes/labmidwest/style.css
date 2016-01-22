@@ -46,6 +46,11 @@ H5 {
   margin: 0;
 }
 
+UL, OL {
+  margin: 0 0 0 0.7em;
+  padding: 0 0 0 0.7em;
+}
+
 .site-width {
   width: 1000px;
   margin: 0 auto;
@@ -189,117 +194,227 @@ A.lm-button:hover, A.lm-button:active {
   font-size: 92.85%;
 }
 
-.home-product-video {
-  background: #26455A;
-  position: relative;
-}
-
-.home-video-background {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 52.2%;
-  height: 100%;
-  background: url(images/home-video.jpg) no-repeat left center;
-  background-size: cover;
-}
-
 .overlay {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
 }
 
-.home-featured-product {
+.site-width-left {
   float: left;
-  width: 46.5%;
-  min-height: 434px;
-  padding: 43px 5% 43px 0;
+  width: 47.9%;
+}
+
+.site-width-right {
+  float: right;
+  width: 52.1%;
+}
+
+.site-width-left-content {
+  float: right;
+  width: 465px;
+  padding: 43px 7% 43px 0;
   box-sizing: border-box;
+}
+
+.home-product-video {
+  background: #26455A;
+  display: flex;
+  min-height: 434px;
+}
+
+.home-product-video  .site-width-left-content {
   font-size: 106.25%;
   line-height: 1.8em;
   color: #EBEBEB;
 }
 
-.home-featured-product P { margin: 0; }
+.home-product-video  .site-width-left-content P { margin: 0; }
 
-.home-featured-product H5 {
+.home-product-video  .site-width-left-content H5 {
   font-size: 105.88%;
   font-weight: normal;
   color: #5598C6;
   margin-bottom: 0.65em;
 }
 
-.home-featured-product H3 {
+.home-product-video  .site-width-left-content H3 {
   font-size: 223.52%;
   font-weight: normal;
   text-transform: uppercase;
   margin: 0 0 0.45em;
 }
 
-.home-featured-product A.lm-button:link,
-.home-featured-product A.lm-button:visited {
+.home-product-video  .site-width-left-content A.lm-button:link,
+.home-product-video  .site-width-left-content A.lm-button:visited {
   color: #FFFFFF;
   border: 3px solid #3E6F91;
   font-size: 105.88%;
   margin: 2.2em 0 0;
 }
 
-.home-featured-product A.lm-button:hover,
-.home-featured-product A.lm-button:active {
+.home-product-video  .site-width-left-content A.lm-button:hover,
+.home-product-video  .site-width-left-content A.lm-button:active {
   color: #3E6F91;
   border: 3px solid #707070;
 }
 
-.home-product-video .site-width {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.home-video {
-  float: right;
-  width: 53%;
-  text-align: center;
+.home-product-video .site-width-right {
   position: relative;
-  z-index: 1;
+  display: flex;
+  align-items: center;
+  background: url(images/home-video.jpg) no-repeat left center;
+  background-size: cover;
 }
 
-.home-video P { margin: 0; }
+.home-product-video .site-width-right .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
-.home-video A:link,
-.home-video A:visited {
+.home-product-video .site-width-right-content {
+  width: 535px;
+  text-align: center;
+}
+
+.home-product-video .site-width-right-content P { margin: 0; }
+
+.home-product-video .site-width-right-content A:link,
+.home-product-video .site-width-right-content A:visited {
   border: 8px solid rgba(255, 255, 255, 0.6);
   border-radius: 50%;
 }
 
-.home-video A:hover,
-.home-video A:active {
+.home-product-video .site-width-right-content A:hover,
+.home-product-video .site-width-right-content A:active {
   border: 8px solid rgba(255, 255, 255, 0.8);
 }
 
-.home-video A:link .fa-circle,
-.home-video A:visited .fa-circle {
+.home-product-video .site-width-right-content A:link .fa-circle,
+.home-product-video .site-width-right-content A:visited .fa-circle {
   color: #FFFFFF;
   opacity: 0.8;
 }
 
-.home-video A:hover .fa-circle,
-.home-video A:active .fa-circle {
+.home-product-video .site-width-right-content A:hover .fa-circle,
+.home-product-video .site-width-right-content A:active .fa-circle {
   opacity: 1;
 }
 
-.home-video A:link .fa-play,
-.home-video A:visited .fa-play {
+.home-product-video .site-width-right-content A:link .fa-play,
+.home-product-video .site-width-right-content A:visited .fa-play {
   color: #3E6F91;
   padding-left: 0.1em;
 }
 
-.home-video A:hover .fa-play,
-.home-video A:active .fa-play {
+.home-product-video .site-width-right-content A:hover .fa-play,
+.home-product-video .site-width-right-content A:active .fa-play {
   color: #707070;
   padding-left: 0.1em;
 }
+
+.home-philosophy-news {
+  background: #F1F2F2;
+}
+
+.home-philosophy-news .site-width-left-content {
+  padding-bottom: 0;
+}
+
+.home-philosophy-news .site-width-left-content H3 {
+  margin: 0 0 0.2em;
+  color: #26455A;
+  font-weight: normal;
+  font-size: 212.5%;
+  line-height: 1em;
+}
+
+.home-philosophy-news .site-width-left-content P {
+  margin: 0;
+  line-height: 1.4em;
+}
+
+.home-philosophy-news .site-width-left-content OL {
+  margin-left: 0.9em;
+  padding-left: 0.9em;
+}
+
+.home-philosophy-news .site-width-left-content LI {
+  padding-top: 1em;
+  font-size: 137.5%;
+  line-height: 1em;
+  color: #3E6F91;
+}
+
+.home-philosophy-news .site-width-left-content .lm-button {
+  margin: 2em 0;
+}
+
+.home-philosophy-news .site-width-right {
+  background-image: url(images/home-news.jpg);
+  background-size: cover;
+}
+
+.home-news-background {
+  background-size: cover;
+  background-repeat: none;
+  background-position: center top;
+}
+
+.home-news-background:nth-child(2) { background-position: center center; }
+.home-news-background:nth-child(3) { background-position: center bottom; }
+
+.home-news-content {
+  width: 535px;
+  padding: 2em 0 2em 50px;
+  box-sizing: border-box;
+  color: #E1E1E1;
+  font-size: 75%;
+  line-height: 1.5em;
+  position: relative;
+  z-index: 3;
+}
+
+.home-news-content H2 {
+  margin: 0 0 2.5em;
+  color: #FFFFFF;
+  font-size: 116.66%;
+  font-weight: normal;
+  line-height: 1em;
+  text-decoration: underline;
+  display: none;
+}
+
+.home-news-background:first-child H2 {
+  display: block;
+}
+
+.home-news-content .home-news-date {
+  color: #60ADE2;
+  font-size: 91.66%;
+  text-transform: uppercase;
+}
+
+.home-news-content H3 {
+  margin: 0.1em 0 0.3em;
+  font-size: 200%;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1em;
+}
+
+.home-news-content A:link,
+.home-news-content A:visited {
+  color: #60ADE2;
+  font-weight: bold;
+}
+
+.home-news-content A:hover,
+.home-news-content A:active {
+  color: #707070;
+}
+
 
 
 
