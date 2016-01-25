@@ -38,12 +38,35 @@ A:hover, A:active {
   text-decoration: none;
 }
 
+H1, H2, H3, H4, H5 {
+  color: #26455A;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+H1 {
+  font-size: 26px;
+  line-height: 1em;
+}
+
+H2 {
+  font-size: 24px;
+  line-height: 1em;
+}
+
+H3 {
+  font-size: 22px;
+  line-height: 1em;
+}
+
+H4 {
+  font-size: 20px;
+  line-height: 1em;
+}
+
 H5 {
   font-size: 17px;
   line-height: 1em;
-  color: #27465B;
-  text-transform: uppercase;
-  margin: 0;
 }
 
 UL, OL {
@@ -241,6 +264,7 @@ A.lm-button:hover, A.lm-button:active {
 .home-product-video  .site-width-left-content H3 {
   font-size: 223.52%;
   font-weight: normal;
+  color: #FFFFFF;
   text-transform: uppercase;
   margin: 0 0 0.45em;
 }
@@ -316,6 +340,7 @@ A.lm-button:hover, A.lm-button:active {
 
 .home-philosophy-news {
   background: #F1F2F2;
+  margin-bottom: 2.6em;
 }
 
 .home-philosophy-news .site-width-left-content {
@@ -402,6 +427,7 @@ A.lm-button:hover, A.lm-button:active {
   font-weight: normal;
   text-transform: uppercase;
   line-height: 1em;
+  color: #FFFFFF;
 }
 
 .home-news-content A:link,
@@ -414,6 +440,100 @@ A.lm-button:hover, A.lm-button:active {
 .home-news-content A:active {
   color: #707070;
 }
+
+.home-prefooter {
+  margin-bottom: 2.6em;
+}
+
+.home-prefooter .one-half {
+  width: 52%;
+  margin-right: 0;
+}
+
+.home-prefooter .one-half.last {
+  width: 42%;
+  padding: 9px 0 0 4%;
+}
+
+.home-prefooter .col1,
+.home-prefooter .col2 {
+  font-size: 106.25%;
+  line-height: 1.4em;
+  float: left;
+  width: 41%;
+  padding: 10px 5.8% 3em 0;
+  border-right: 1px solid #CCCCCC;
+  position: relative;
+}
+
+.home-prefooter .col2 {
+  padding-left: 5.8%;
+}
+
+.home-prefooter .col1 H3,
+.home-prefooter .col2 H3 {
+  font-size: 147%;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin-bottom: 0.3em;
+}
+
+.home-prefooter .phone {
+  font-size: 117.64%;
+  font-weight: bold;
+  color: #27465B;
+}
+
+.home-prefooter .col1 .lm-button,
+.home-prefooter .col2 .lm-button {
+  position: absolute;
+  bottom: 10px;
+}
+
+.home-prefooter .one-half.last H3 {
+  font-size: 156.25%;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.home-prefooter .simcal-default-calendar-list {
+  padding: 0;
+}
+
+.home-prefooter .simcal-default-calendar-list ul.simcal-events {
+  margin: 0;
+  padding: 0;
+}
+
+.home-prefooter .simcal-default-calendar-list .simcal-event-details {
+  font-size: 16px;
+  line-height: 1.3em;
+}
+
+.home-prefooter .simcal-default-calendar-list .simcal-event-details .fg-event-date {
+  float: left;
+  width: 25%;
+  outline: 1px solid red;
+}
+
+.home-prefooter .simcal-default-calendar-list .simcal-event-details .fg-event-date SPAN {
+  display: block;
+  width: 2em;
+  height: 2em;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1em;
+  text-decoration: underline;
+  border: 3px solid #C2C2C2;
+}
+
+.home-prefooter .simcal-default-calendar-list .simcal-event-details .fg-event-details {
+  float: left;
+  width: 75%;
+  outline: 1px solid green;
+}
+
 
 
 
