@@ -22,12 +22,17 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+			  <div class="banner banner-news">
+					<div class="site-width">
+						<a href="#">Case Studies</a>
+					</div>
+				</div>
+
+				<div class="site-width">
 			<?php endif; ?>
 
 			<?php
+			$count = 1;
 			// Start the loop.
 			while ( have_posts() ) : the_post();
 
@@ -36,7 +41,14 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+				if ( is_home() && ! is_front_page() ) :
+				  //get_template_part( 'content-blog', get_post_format() );
+				  include( locate_template( 'content-blog.php' ) );
+				else:
+					get_template_part( 'content-blog-single', get_post_format() );
+				endif;
+        
+				if ($count == 3) { echo "<div style=\"clear: both;\"></div>"; $count = 1; } else { $count++; }
 
 			// End the loop.
 			endwhile;
@@ -48,6 +60,8 @@ get_header(); ?>
 				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
 			) );
 
+			if ( is_home() && ! is_front_page() ) : echo "</div>"; endif;
+
 		// If no content, include the "No posts found" template.
 		else :
 			get_template_part( 'template-parts/content', 'none' );
@@ -56,7 +70,7 @@ get_header(); ?>
 		?>
 
 		</main><!-- .site-main -->
+		<div class="footer-gray"></div>
 	</div><!-- .content-area -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

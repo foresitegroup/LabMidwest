@@ -61,27 +61,17 @@
 <div class="site-width home-prefooter">
   <div class="one-half">
     <div class="col1" data-mh="pf-height">
-      <h3>SALES &amp; SERVICE</h3>
-      Providing the best sales &amp; service to our customers, speak to one of our sales representatives today:<br>
-      <br>
-      <span class="phone">(414) 258-6415</span><br>
-      <br>
-      <a href="#" class="lm-button">CONTACT US</a>
+      <?php echo do_shortcode('[insert page="sales-service" display="content"]'); ?>
     </div>
 
     <div class="col2" data-mh="pf-height">
-      <h3>REQUEST MORE INFORMATION</h3>
-      For more information contact us directly or follow the link below to complete the form for your RMI.<br>
-      <br>
-      <a href="#" class="lm-button">REQUEST MORE INFO</a>
+      <?php echo do_shortcode('[insert page="request-more-information" display="content"]'); ?>
     </div>
   </div>
 
   <div class="one-half last">
     <h3>UPCOMING EVENTS</h3>
     <?php echo do_shortcode('[calendar id="43"]'); ?>
+    <a href="events" class="lm-button">VIEW ALL EVENTS</a>
   </div>
 </div>
-
-
-<br><br><br><br><br><br><br><br><br>
