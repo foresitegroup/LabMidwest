@@ -1,5 +1,8 @@
 <div class="banner-home">
-  
+  <div class="cycle-slideshow" data-cycle-slides="> div" data-cycle-timeout="8000" data-cycle-pager-template="<span></span>">
+    <p class="cycle-pager"></p>
+    <?php echo do_shortcode('[insert page="slider" display="content"]'); ?>
+  </div> <!-- END cycle-slideshow -->
 </div>
 
 <div class="home-content">

@@ -20,17 +20,15 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
-
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-			  <div class="banner banner-news">
-					<div class="site-width">
-						<?php wp_nav_menu( array( 'theme_location' => 'blog-menu' ) ); ?>
-						<a href="<?php echo home_url(); ?>/news" class="blog-home-link current-menu-item">VIEW ALL</a>
-					</div>
-				</div>
-
+			
+		  <div class="banner banner-news">
 				<div class="site-width">
-			<?php endif; ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'blog-menu' ) ); ?>
+					<a href="<?php echo home_url(); ?>/news" class="blog-home-link">VIEW ALL</a>
+				</div>
+			</div>
+
+			<div class="site-width">
 
 			<?php
 			$count = 1;
@@ -42,12 +40,8 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				if ( is_home() && ! is_front_page() ) :
-				  //get_template_part( 'content-blog', get_post_format() );
-				  include( locate_template( 'content-blog.php' ) );
-				else:
-					get_template_part( 'content-blog-single', get_post_format() );
-				endif;
+				// get_template_part( 'template-parts/content', get_post_format() );
+				include( locate_template( 'content-blog.php' ) );
         
 				if ($count == 3) { echo "<div style=\"clear: both;\"></div>"; $count = 1; } else { $count++; }
 
@@ -61,7 +55,7 @@ get_header(); ?>
 				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
 			) );
 
-			if ( is_home() && ! is_front_page() ) : echo "</div>"; endif;
+			echo "</div>";
 
 		// If no content, include the "No posts found" template.
 		else :
