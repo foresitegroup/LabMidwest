@@ -120,7 +120,7 @@ INPUT[type="submit"] {
   border-radius: 10px;
   min-width: 35%;
   box-sizing: border-box;
-  padding: 0.5em 1.2em;
+  padding: 0.7em 1.2em;
   background: #3E6F91;
   color: #142430;
   font-family: 'Bitter', serif;
@@ -132,11 +132,36 @@ INPUT[type="submit"] {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
+  display: block;
+  margin: 0 auto;
 }
 
 INPUT[type="submit"]:hover {
   background: #335B76;
   color: #CCCCCC;
+}
+
+.half-field-left-wrap {
+  float: left;
+  width: 48%;
+}
+
+.half-field-right-wrap {
+  float: right;
+  width: 48%;
+}
+
+.ninja-forms-required-items {
+  font-size: 80%;
+  margin-bottom: 0.5em;
+}
+
+.lm-ninja-forms-req-symbol {
+  color: #60ADE2;
+}
+
+.rmi-textarea {
+  margin: 2em 0;
 }
 
 .site-width {
@@ -389,8 +414,40 @@ A.lm-button:hover, A.lm-button:active {
 
 .banner {
   height: 280px;
-  background: #3E6F91;
+  background: #26455A;
+  color: #FFFFFF;
   margin-bottom: 52px;
+}
+
+.banner-product .site-width-left {
+  width: 39.4%;
+  height: 280px;
+}
+
+.banner-product .site-width-right {
+  width: 60.6%;
+  height: 280px;
+  background-size: cover;
+  background-position: left center;
+}
+
+.banner-product .site-width-left-content {
+  width: 340px;
+  height: inherit;
+  padding: 0 4% 0 0;
+  font-size: 93.75%;
+  line-height: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-product H1 {
+  color: #FFFFFF;
+  font-size: 226%;
+  font-weight: normal;
+  line-height: 0.9em;
+  margin-bottom: 0.3em;
 }
 
 .banner-news,
@@ -841,7 +898,7 @@ A.lm-button:hover, A.lm-button:active {
 .footer INPUT:focus:-ms-input-placeholder { color: transparent; } /* IE 10+ */
 
 .footer INPUT[type="submit"] {
-  margin-bottom: 0.8em;
+  margin: 0 0 0.8em;
   border: 3px solid #294960;
   min-width: auto;
   padding: 0.5em 1.5em;
@@ -905,6 +962,98 @@ A.lm-button:hover, A.lm-button:active {
   color: #111E28;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 85.7%;
+}
+
+.product {
+  margin-bottom: 5em;
+}
+
+.product.product-header {
+  margin-bottom: 3.4em;
+}
+
+.product:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.product-image {
+  float: left;
+  width: 42.1%;
+  min-height: 317px;
+}
+
+.product-image H2 {
+  font-size: 112.5%;
+  color: #12212B;
+}
+
+.product-image IMG {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-info {
+  float: right;
+  width: 52.9%;
+  min-height: 317px;
+  line-height: 1.4em;
+  padding-bottom: 2em;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.product.product-header .product-image,
+.product.product-header .product-info {
+  min-height: 0;
+  line-height: 1em;
+}
+
+.product-info H2 {
+  font-size: 162.5%;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+
+.product-info A.rm:link,
+.product-info A.rm:visited {
+  position: absolute;
+  bottom: 0;
+  background: #26455A;
+  color: #FFFFFF;
+  font-size: 81.25%;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1em;
+  padding: 0.75em 1em;
+}
+
+.product-info A.rm:after {
+  font-family: FontAwesome;
+  content: '\f107';
+  color: #00AEEF;
+  margin-left: 0.4em;
+  font-size: 1.3em;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+.product-info A.rm:hover,
+.product-info A.rm:active {
+  background: #335B76;
+  color: #CCCCCC;
+}
+
+.product-info A.rm:hover:after {
+  color: #3E6F91;
+}
+
+.product.product-header .product-info HR {
+  border: 0;
+  border-top: 5px solid #5598C6;
+  margin: 0.4em 0 0;
+  width: 50px;
 }
 
 #menu-blog-menu {
@@ -998,6 +1147,26 @@ A.current-menu-item:visited,
 
 .blog-entry-single {
   line-height: 1.9em;
+}
+
+#rmi {
+  padding: 3em 0;
+  background: #F1F2F2;
+  font-size: 125%;
+}
+
+#rmi .ninja-forms-required-items {
+  font-size: 60%;
+}
+
+.rmi-header {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.rmi-header H2 {
+  font-size: 180%;
+  margin-bottom: 1em;
 }
 
 
