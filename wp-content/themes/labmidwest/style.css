@@ -77,6 +77,13 @@ UL, OL {
   padding: 0 0 0 0.7em;
 }
 
+HR {
+  border: 0;
+  border-top: 5px solid #5598C6;
+  margin: 0.4em 0 0;
+  width: 50px;
+}
+
 INPUT[type="text"],
 INPUT[type="email"],
 TEXTAREA {
@@ -274,6 +281,7 @@ A.lm-button:hover, A.lm-button:active {
   line-height: 98px;
   padding-left: 2.5em;
   position: relative;
+  z-index: 1000;
 }
 
 #menu-main-menu LI:first-child {
@@ -417,6 +425,21 @@ A.lm-button:hover, A.lm-button:active {
   background: #26455A;
   color: #FFFFFF;
   margin-bottom: 52px;
+}
+
+.banner-contact {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 150%;
+  line-height: 1.35em;
+  margin-bottom: 0;
+}
+
+.banner-contact .site-width {
+  padding: 0 0 25px 2%;
+  box-sizing: border-box;
 }
 
 .banner-product .site-width-left {
@@ -966,10 +989,7 @@ A.lm-button:hover, A.lm-button:active {
 
 .product {
   margin-bottom: 5em;
-}
-
-.product.product-header {
-  margin-bottom: 3.4em;
+  display: flex;
 }
 
 .product:after {
@@ -978,14 +998,54 @@ A.lm-button:hover, A.lm-button:active {
   clear: both;
 }
 
+.product.product-header {
+  margin-bottom: 3em;
+}
+
+.product .one-half {
+  width: 45.7%;
+  margin-right: 8.6%;
+  line-height: 1.4em;
+  padding-bottom: 2.4em;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.product .one-half.last {
+  margin-right: 0;
+}
+
+.product.product-header .one-half {
+  padding-bottom: 0;
+}
+
+.product .one-half H2 {
+  font-size: 212.5%;
+  font-weight: normal;
+}
+
+.product .one-half IMG {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+.product .one-half .lm-button {
+  position: absolute;
+  bottom: 0;
+}
+
 .product-image {
   float: left;
   width: 42.1%;
-  min-height: 317px;
+  margin-right: 5%;
+  line-height: 0.8em;
 }
 
+.product-header .one-half H2,
 .product-image H2 {
   font-size: 112.5%;
+  font-weight: bold;
   color: #12212B;
 }
 
@@ -997,7 +1057,6 @@ A.lm-button:hover, A.lm-button:active {
 .product-info {
   float: right;
   width: 52.9%;
-  min-height: 317px;
   line-height: 1.4em;
   padding-bottom: 2em;
   box-sizing: border-box;
@@ -1047,13 +1106,6 @@ A.lm-button:hover, A.lm-button:active {
 
 .product-info A.rm:hover:after {
   color: #3E6F91;
-}
-
-.product.product-header .product-info HR {
-  border: 0;
-  border-top: 5px solid #5598C6;
-  margin: 0.4em 0 0;
-  width: 50px;
 }
 
 #menu-blog-menu {
@@ -1169,6 +1221,105 @@ A.current-menu-item:visited,
   margin-bottom: 1em;
 }
 
+.contact-form {
+  -webkit-box-shadow: 0 1px 20px 0 rgba(0,0,0,0.35);
+  -moz-box-shadow: 0 1px 20px 0 rgba(0,0,0,0.35);
+  box-shadow: 0 1px 20px 0 rgba(0,0,0,0.35);
+  padding: 48px 3%;
+  box-sizing: border-box;
+  position: relative;
+  top: -48px;
+  background: #FFFFFF;
+  margin-bottom: 60px;
+}
+
+.contact-form-header {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.contact-form-header H2 {
+  font-size: 225%;
+}
+
+.contact-form-header HR {
+  margin: 1.8em auto 2.3em;
+}
+
+.team {
+  margin-bottom: 5em;
+  display: table;
+}
+
+.team-image {
+  display: table-cell;
+  vertical-align: middle;
+  width: 22%;
+  line-height: 0.8em;
+}
+
+.team-image IMG {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.team-info {
+  display: table-cell;
+  vertical-align: middle;
+  width: 74.8%;
+  padding-left: 3.2%;
+  font-size: 93.75%;
+  line-height: 1.5em;
+}
+
+.team-info STRONG {
+  color: #213B4D;
+}
+
+.team-info A:link, .team-info A:visited {
+  color: #5598C6;
+  font-weight: bold;
+}
+
+.team-info A:hover, .team-info A:active {
+  color: #707070;
+}
+
+.team-info P {
+  margin: 1em 0 0;
+}
+
+.team-bio {
+  font-size: 93.33%;
+}
+
+.contact-prefooter {
+  background: #213B4D;
+  color: #EBEBEB;
+  font-size: 137.5%;
+  line-height: 1.8em;
+  padding: 2em 0;
+}
+
+.contact-prefooter .two-third {
+  padding-right: 8.5%;
+  margin-right: 5%;
+  box-sizing: border-box;
+  border-right: 1px solid #3E6F91;
+}
+
+.contact-prefooter .one-third.last {
+  font-size: 136.36%;
+  line-height: 1em;
+}
+
+.contact-prefooter .one-third.last UL {
+  margin-top: 1em;
+  font-size: 56.66%;
+  line-height: 1.4em;
+}
+
 
 
 
@@ -1192,5 +1343,10 @@ A.current-menu-item:visited,
 
   .home-content H5 {
     min-height: 2em;
+  }
+
+  .banner-product .site-width-left-content {
+    width: 100%;
+    padding: 0 5%;
   }
 }

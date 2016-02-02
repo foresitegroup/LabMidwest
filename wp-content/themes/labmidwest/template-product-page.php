@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Product Template */
+/* Template Name: Product Page */
 
 get_header(); ?>
 
