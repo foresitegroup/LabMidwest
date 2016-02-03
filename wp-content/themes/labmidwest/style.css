@@ -269,6 +269,15 @@ A.lm-button:hover, A.lm-button:active {
   z-index: 100;
 }
 
+#menu-toggle,
+#show-menu {
+  display: none;
+}
+
+#show-menu:checked + .menu-main-menu-container {
+  display: block;
+}
+
 #menu-main-menu {
   margin: 0;
   padding: 0;
@@ -416,6 +425,7 @@ A.lm-button:hover, A.lm-button:active {
   cursor: pointer;
   border-radius: 50%;
   border: 3px solid #2C4E65;
+  background: #3E6F91;
 }
 
 .banner-home .cycle-pager span.cycle-pager-active { background: #EBEBEB; }
@@ -435,6 +445,7 @@ A.lm-button:hover, A.lm-button:active {
   font-size: 150%;
   line-height: 1.35em;
   margin-bottom: 0;
+  background-position: center center;
 }
 
 .banner-contact .site-width {
@@ -533,6 +544,14 @@ A.lm-button:hover, A.lm-button:active {
   font-size: 87.5%;
   line-height: 1.4em;
   margin-bottom: 2.6em;
+}
+
+.home-content H5 {
+  margin-bottom: 0.9em;
+}
+
+.home-content P {
+  margin: 0;
 }
 
 .home-content IMG {
@@ -753,7 +772,7 @@ A.lm-button:hover, A.lm-button:active {
 }
 
 .home-prefooter .one-half.last {
-  width: 42%;
+  width: 44%;
   padding: 9px 0 0 4%;
 }
 
@@ -1321,19 +1340,10 @@ A.current-menu-item:visited,
 }
 
 
-
-
-
-
-
-
-
-
-
 @media only screen and (max-width: 800px) {
   /* Small computer or landscape tablet */
   .site-width {
-    width: 94%;
+    width: 96%;
   }
 
   .site-width IMG {
@@ -1341,12 +1351,424 @@ A.current-menu-item:visited,
     height: auto;
   }
 
+  .banner-home .site-width-left-content {
+    width: 96%;
+    padding: 50px 4% 0 0;
+  }
+
   .home-content H5 {
     min-height: 2em;
+  }
+
+  .home-product-video .site-width-left-content,
+  .home-product-video .site-width-right-content,
+  .home-philosophy-news .site-width-left-content,
+  .home-news-content {
+    width: 96%;
+    margin: 0 auto;
+  }
+
+  .home-prefooter .col1 H3,
+  .home-prefooter .col2 H3 {
+    font-size: 129%;
+  }
+
+  .home-prefooter .col1 .lm-button,
+  .home-prefooter .col2 .lm-button {
+    max-width: 60%;
+  }
+
+  .home-prefooter .one-half.last H3 {
+    font-size: 137.5%;
+  }
+
+  .home-prefooter .simcal-default-calendar-list .simcal-event-details .fg-event-date {
+    width: 20%;
+  }
+
+  .home-prefooter .simcal-default-calendar-list .simcal-event-details .fg-event-details {
+    width: 80%;
+  }
+
+  .footer INPUT[type="text"],
+  .footer INPUT[type="email"] {
+    width: 94%;
   }
 
   .banner-product .site-width-left-content {
     width: 100%;
     padding: 0 5%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Tablet */
+  #menu-toggle {
+    display: block;
+    cursor: pointer;
+    float: right;
+    margin: 25px 3% 0 0;
+    color: #27465B;
+    font-size: 3em;
+  }
+
+  .logo-menu .menu-main-menu-container {
+    position: absolute;
+    top: 0;
+    right: 12%;
+    z-index: 999999;
+    background-color: #FFFFFF;
+    display: none;
+    padding: 0.6em 0;
+  }
+
+  #menu-main-menu LI,
+  #menu-main-menu LI:first-child {
+    float: none;
+    line-height: 1em;
+    padding: 0.6em 1.2em;
+    text-align: center;
+  }
+  
+  #menu-main-menu LI UL,
+  #menu-main-menu LI:hover UL {
+    position: static;
+    background: #FFFFFF;
+    padding: 0;
+  }
+
+  #menu-main-menu LI UL LI,
+  #menu-main-menu LI UL LI:first-child {
+    padding: 0.4em 0 0;
+  }
+
+  #menu-main-menu LI UL LI A:link,
+  #menu-main-menu LI UL LI A:visited {
+    color: #27465B;
+  }
+
+  #menu-main-menu LI UL LI A:hover,
+  #menu-main-menu LI UL LI A:active {
+    color: #707070;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* Small tablet */
+  .one-fourth {
+    width: 48%;
+    margin-right: 4%;
+  }
+
+  .one-fourth:nth-child(2) {
+    margin: 0 0 3em 0;
+  }
+
+  .banner-home {
+    height: auto;
+    overflow: none;
+  }
+
+  .banner-home .site-width-left,
+  .banner-home .site-width-right,
+  .banner-home .site-width-left-content {
+    float: none;
+    width: 100%;
+  }
+
+  .banner-home .site-width-left-content {
+    padding: 43px 2% 1em;
+  }
+
+  .banner-home .site-width-right {
+    height: 322px;
+    background-position: center center;
+  }
+
+  .home-content H5 {
+    margin-bottom: 0;
+  }
+
+  .banner-home .site-width-left-content {
+    font-size: 180%;
+  }
+
+  .banner-home .cycle-pager { 
+    top: -0.5em;
+    right: 2%;
+  }
+
+  .home-product-video .site-width-left,
+  .home-product-video .site-width-right {
+    width: 50%;
+  }
+
+  .home-product-video .site-width-right {
+    background: url(images/home-video.jpg) no-repeat center center;
+  }
+
+  .home-philosophy-news .site-width-left,
+  .home-philosophy-news .site-width-right,
+  .home-philosophy-news .site-width-left-content {
+    float: none;
+    width: 100%;
+  }
+
+  .home-philosophy-news .site-width-left-content {
+    padding: 43px 2%;
+  }
+
+  .home-philosophy-news .site-width-left-content .lm-button {
+    margin: 2em 0 0;
+  }
+
+  .home-news-content {
+    padding: 2em 0;
+    margin: 0 auto;
+  }
+
+  .home-prefooter .one-half,
+  .home-prefooter .one-half.last {
+    float: none;
+    width: 100%;
+  }
+
+  .home-prefooter .one-half:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .home-prefooter .col1,
+  .home-prefooter .col2 {
+    width: 50%;
+    padding: 10px 3% 3em 0;
+    box-sizing: border-box;
+  }
+
+  .home-prefooter .col2 {
+    border-right: 0;
+    padding: 10px 0 3em 3%;
+  }
+
+  .home-prefooter .col1 H3,
+  .home-prefooter .col2 H3 {
+    font-size: 147%;
+  }
+
+  .home-prefooter .col1 .lm-button,
+  .home-prefooter .col2 .lm-button {
+    max-width: 100%;
+  }
+
+  .home-prefooter .one-half.last {
+    padding: 2em 0 0;
+  }
+
+  .home-prefooter .one-half.last H3 {
+    font-size: 156.25%;
+  }
+
+  .home-prefooter .simcal-default-calendar-list .simcal-event-details .fg-event-date {
+    width: 12%;
+  }
+
+  .home-prefooter .simcal-default-calendar-list .simcal-event-details .fg-event-details {
+    width: 88%;
+  }
+
+  .footer .col1,
+  .footer .col2,
+  .copyright {
+    float: none;
+    width: 100%;
+    border-right: 0;
+    text-align: center;
+  }
+
+  .footer INPUT[type="text"],
+  .footer INPUT[type="email"] {
+    width: 96%;
+  }
+
+  .footer INPUT[type="submit"] {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .footer .menu {
+    margin: 2em 0 0;
+    float: none;
+    display: inline-block;
+  }
+
+  .blog-entry.one-third {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .blog-entry.one-third .blog-entry-footer {
+    margin-bottom: 3em;
+  }
+
+  .team-image {
+    vertical-align: top;
+    width: 33%;
+  }
+
+  .team-info {
+    width: 62%;
+    padding-left: 5%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Phone */
+  .one-fourth,
+  .one-half,
+  .one-third,
+  .two-third,
+  .one-fourth.last,
+  .one-half.last,
+  .one-third.last,
+  .two-third.last {
+    float: none;
+    width: 100%;
+    margin: 0 auto 3em;
+  }
+
+  .half-field-left-wrap,
+  .half-field-right-wrap {
+    float: none;
+    width: 100%;
+  }
+
+  .menu-main-menu-container {
+    top: 96px;
+    right: 1%;
+  }
+
+  .banner-home .site-width-right {
+    height: 212px;
+  }
+  
+  .home-product-video {
+    display: block;
+  }
+
+  .home-product-video .site-width-left,
+  .home-product-video .site-width-right {
+    float: none;
+    width: 100%;
+  }
+
+  .home-product-video .site-width-right-content {
+    padding: 2em 0;
+  }
+
+  .home-prefooter .col1,
+  .home-prefooter .col2 {
+    float: none;
+    width: 100%;
+    border: 0;
+    padding: 0 0 3em 0;
+    margin-bottom: 2em;
+  }
+  
+  .home-prefooter .one-half,
+  .home-prefooter .one-half.last {
+    padding: 0;
+    margin: 0;
+  }
+
+  .home-prefooter .simcal-default-calendar-list .simcal-event-details .fg-event-date {
+    width: 16%;
+  }
+
+  .home-prefooter .simcal-default-calendar-list .simcal-event-details .fg-event-details {
+    width: 84%;
+  }
+
+  #menu-blog-menu LI {
+    float: none;
+    margin-left: 0;
+  }
+
+  .banner-product {
+    height: auto;
+  }
+
+  .banner-product .site-width-left,
+  .banner-product .site-width-right,
+  .banner-product .site-width-left-content {
+    float: none;
+    width: 100%;
+  }
+
+  .banner-product .site-width-left {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .banner-product .site-width-left-content {
+    padding: 0 2%;
+  }
+
+  .banner-product .site-width-right {
+    height: 200px;
+    background-position: center center;
+  }
+  
+  .product {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .product .one-half,
+  .product .product-image,
+  .product .product-info {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .product .product-image {
+    margin-bottom: 1em;
+  }
+
+  .product .product-info {
+    margin-bottom: 3em;
+  }
+
+  .product.product-header .one-half,
+  .product.product-header .product-info{
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .team-image,
+  .team-info {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .team-image {
+    margin-bottom: 1em;
+  }
+
+  .contact-prefooter .two-third {
+    padding-right: 0;
+    margin-right: 0;
+    border-right: 0;
+  }
+
+  .contact-prefooter .one-third.last {
+    margin: 0;
+  }
+
+  .contact-prefooter .one-third.last UL {
+    font-size: 73.33%;
   }
 }

@@ -39,6 +39,8 @@
 
 <div class="site-width logo-menu">
   <a href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="LAB Midwest" id="logo"></a>
-
+  
+  <label for="show-menu" id="menu-toggle"><i class="fa fa-bars"></i></label>
+  <input type="checkbox" id="show-menu" role="button">
   <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 </div>
