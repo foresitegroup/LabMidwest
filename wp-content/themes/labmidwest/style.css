@@ -303,18 +303,17 @@ A.lm-button:hover, A.lm-button:active {
 }
 
 #menu-main-menu LI UL {
-  display: none;
   margin: 0;
   padding: 1em 1.5em;
   list-style-type: none;
+  position: absolute;
+  top: -999em;
+  left: 2.5em;
+  background: #2A4858;
 }
 
 #menu-main-menu LI:hover UL {
-  display: block;
-  position: absolute;
   top: 98px;
-  left: 2.5em;
-  background: #2A4858;
 }
 
 #menu-main-menu LI:hover UL LI {
@@ -329,11 +328,73 @@ A.lm-button:hover, A.lm-button:active {
   font-size: 14px;
   font-family: 'Titillium Web', sans-serif;
   text-transform: none;
+  display: block;
 }
 
 #menu-main-menu LI UL LI A:hover,
 #menu-main-menu LI UL LI A:active {
   color: #60ADE2;
+}
+
+#menu-main-menu LI.products UL {
+  margin: 0;
+  padding: 1.5em 0 1.5em 1em;
+  left: 0.5em;
+}
+
+#menu-main-menu LI.products UL LI {
+  float: left;
+  white-space: nowrap;
+  line-height: 1em;
+  padding: 0 1em;
+}
+
+#menu-main-menu LI.products UL LI.column2 {
+  border-right: 1px solid #3E6F91;
+  padding-right: 2em;
+}
+
+#menu-main-menu LI.products UL LI.column3 {
+  padding-left: 2em;
+  padding-right: 0;
+}
+
+#menu-main-menu LI.products UL LI.column1 > A,
+#menu-main-menu LI.products UL LI.column2 > A,
+#menu-main-menu LI.products UL LI.column3 > A {
+  display: none;
+}
+
+#menu-main-menu LI.products UL LI UL {
+  position: static;
+  padding: 0;
+  display: block;
+}
+
+#menu-main-menu LI.products UL LI UL LI {
+  float: none;
+  padding: 0.3em 0 0;
+}
+
+#menu-main-menu LI.products UL LI UL LI.product-section-header {
+  padding: 0;
+}
+
+#menu-main-menu LI.products UL LI UL LI.product-section-header.psh2 {
+  padding-top: 1.2em;
+}
+
+#menu-main-menu LI.products UL LI UL LI.product-section-header > A:link,
+#menu-main-menu LI.products UL LI UL LI.product-section-header > A:visited {
+  font-family: 'Bitter', serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #60ADE2;
+}
+
+#menu-main-menu LI.products UL LI UL LI.product-section-header > A:hover,
+#menu-main-menu LI.products UL LI UL LI.product-section-header > A:active {
+  color: #FFFFFF;
 }
 
 .overlay {
@@ -999,6 +1060,22 @@ A.lm-button:hover, A.lm-button:active {
   text-transform: none;
 }
 
+.footer .menu LI.products UL LI.column1 > A,
+.footer .menu LI.products UL LI.column2 > A,
+.footer .menu LI.products UL LI.column3 > A {
+  display: none;
+}
+
+.footer .menu LI.products UL LI,
+.footer .menu LI.products UL LI UL LI {
+  float: none;
+  padding: 0;
+}
+
+.footer .menu LI.products UL LI UL LI UL {
+  display: none;
+}
+
 .copyright {
   padding-top: 27px;
   color: #111E28;
@@ -1351,6 +1428,18 @@ A.current-menu-item:visited,
     height: auto;
   }
 
+  #menu-main-menu LI.home {
+    display: none;
+  }
+
+  #menu-main-menu LI {
+    padding-left: 1.9em;
+  }
+
+  #menu-main-menu LI.products UL {
+    left: -0.5em;
+  }
+
   .banner-home .site-width-left-content {
     width: 96%;
     padding: 50px 4% 0 0;
@@ -1422,12 +1511,24 @@ A.current-menu-item:visited,
     padding: 0.6em 0;
   }
 
+  #menu-main-menu LI.home {
+    display: block;
+  }
+
   #menu-main-menu LI,
   #menu-main-menu LI:first-child {
     float: none;
     line-height: 1em;
     padding: 0.6em 1.2em;
     text-align: center;
+  }
+
+  #menu-main-menu LI UL {
+    display: none;
+  }
+
+  #menu-main-menu LI:hover UL {
+    display: block;
   }
   
   #menu-main-menu LI UL,
@@ -1449,6 +1550,31 @@ A.current-menu-item:visited,
 
   #menu-main-menu LI UL LI A:hover,
   #menu-main-menu LI UL LI A:active {
+    color: #707070;
+  }
+  
+  #menu-main-menu LI.products UL {
+    position: static;
+    width: 100% !important;
+  }
+
+  #menu-main-menu LI.products UL LI {
+    float: none;
+  }
+
+  #menu-main-menu LI.products UL LI.column2,
+  #menu-main-menu LI.products UL LI.column3 {
+    border-right: 0;
+    padding: 0;
+  }
+
+  #menu-main-menu LI.products UL LI UL LI.product-section-header,
+  #menu-main-menu LI.products UL LI UL LI.product-section-header.psh2 {
+    padding-top: 0.4em;
+  }
+
+  #menu-main-menu LI.products UL LI UL LI.product-section-header > A:hover,
+  #menu-main-menu LI.products UL LI UL LI.product-section-header > A:active {
     color: #707070;
   }
 }

@@ -22,6 +22,14 @@
   <script type="text/javascript">
     jQuery(document).ready(function() {
       jQuery("a[href^='http'], a[href$='.pdf']").not("[href*='" + window.location.host + "']").attr('target','_blank');
+
+      var totalWidth = 0;
+      jQuery('#menu-main-menu LI.products > UL > LI').each(function(index) {
+        totalWidth += parseInt(jQuery(this).outerWidth(), 10) + 10;
+      });
+      jQuery('#menu-main-menu LI.products > UL').width(totalWidth);
+      jQuery('.psh1').matchHeight();
+      jQuery('.psh2').matchHeight();
     });
   </script>
 </head>
