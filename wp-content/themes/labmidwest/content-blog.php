@@ -1,7 +1,7 @@
 <a href="<?php the_permalink(); ?>" class="blog-entry one-third<?php if ($count == 3) echo " last"; ?>">
   <?php the_title( '<h2>', '</h2>' ); ?>
 
-  <div class="blog-entry-image"<?php if (has_post_thumbnail()) echo "style=\"background-image: url(" . wp_get_attachment_url(get_post_thumbnail_id()) . "\""; ?>>
+  <div class="blog-entry-image"<?php if (has_post_thumbnail()) echo "style=\"background-image: url(" . wp_get_attachment_url(get_post_thumbnail_id()) . ")\""; ?>>
     <div class="overlay"><span class="lm-button">VIEW</span></div>
   </div>
 

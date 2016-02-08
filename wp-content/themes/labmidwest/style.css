@@ -100,6 +100,7 @@ TEXTAREA {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
+  overflow: auto; /* Good ol' IE */
 }
 
 INPUT[type="text"]:focus,
@@ -108,10 +109,10 @@ TEXTAREA:focus {
   background: #335B76;
 }
 
-INPUT::-webkit-input-placeholder { color: #FFFFFF; text-transform: uppercase; }
-INPUT:-moz-placeholder { color: #FFFFFF; text-transform: uppercase; } /* FF 4-18 */
-INPUT::-moz-placeholder { color: #FFFFFF; text-transform: uppercase; } /* FF 19+ */
-INPUT:-ms-input-placeholder { color: #FFFFFF; text-transform: uppercase; } /* IE 10+ */
+INPUT::-webkit-input-placeholder { color: #FFFFFF; text-transform: uppercase; opacity: 1; }
+INPUT:-moz-placeholder { color: #FFFFFF; text-transform: uppercase; opacity: 1; } /* FF 4-18 */
+INPUT::-moz-placeholder { color: #FFFFFF; text-transform: uppercase; opacity: 1; } /* FF 19+ */
+INPUT:-ms-input-placeholder { color: #FFFFFF; text-transform: uppercase; opacity: 1; } /* IE 10+ */
 
 INPUT:focus::-webkit-input-placeholder { color: transparent; }
 INPUT:focus:-moz-placeholder { color: transparent; } /* FF 4-18 */
@@ -421,6 +422,7 @@ A.lm-button:hover, A.lm-button:active {
 }
 
 .banner-home {
+  width: 100%;
   height: 455px;
   background: #3E6F91;
   margin-bottom: 52px;
@@ -499,6 +501,7 @@ A.lm-button:hover, A.lm-button:active {
 }
 
 .banner-contact {
+  width: 100%;
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -553,6 +556,7 @@ A.lm-button:hover, A.lm-button:active {
 }
 
 .banner-news {
+  width: 100%;
   height: 137px;
   background: #26455A;
   font-weight: 300;
@@ -827,6 +831,10 @@ A.lm-button:hover, A.lm-button:active {
   color: #707070;
 }
 
+.home-prefooter {
+  margin-bottom: 2.6em;
+}
+
 .home-prefooter .one-half {
   width: 52%;
   margin-right: 0;
@@ -950,7 +958,7 @@ A.lm-button:hover, A.lm-button:active {
   color: #3E6F91;
 }
 
-#main { padding-bottom: 42px; }
+/*#main { padding-bottom: 42px; }*/
 
 .footer-gray {
   height: 50px;
@@ -1355,6 +1363,7 @@ A.current-menu-item:visited,
 }
 
 .team-image IMG {
+  width: 100%;
   max-width: 100%;
   height: auto;
   border-radius: 50%;
