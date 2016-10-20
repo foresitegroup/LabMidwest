@@ -86,8 +86,10 @@ HR {
 
 INPUT[type="text"],
 INPUT[type="email"],
+INPUT[type="tel"],
 TEXTAREA {
-  border: 0;
+  /*border: 0;*/
+  border: 1px solid #3E6F91;
   border-radius: 10px;
   box-sizing: border-box;
   padding: 0.8em 1.3em;
@@ -105,6 +107,7 @@ TEXTAREA {
 
 INPUT[type="text"]:focus,
 INPUT[type="email"]:focus,
+INPUT[type="tel"]:focus,
 TEXTAREA:focus {
   background: #335B76;
 }
@@ -113,6 +116,10 @@ INPUT::-webkit-input-placeholder { color: #FFFFFF; text-transform: uppercase; op
 INPUT:-moz-placeholder { color: #FFFFFF; text-transform: uppercase; opacity: 1; } /* FF 4-18 */
 INPUT::-moz-placeholder { color: #FFFFFF; text-transform: uppercase; opacity: 1; } /* FF 19+ */
 INPUT:-ms-input-placeholder { color: #FFFFFF; text-transform: uppercase; opacity: 1; } /* IE 10+ */
+TEXTAREA::-webkit-input-placeholder { color: #FFFFFF; text-transform: uppercase; opacity: 1; }
+TEXTAREA:-moz-placeholder { color: #FFFFFF; text-transform: uppercase; opacity: 1; } /* FF 4-18 */
+TEXTAREA::-moz-placeholder { color: #FFFFFF; text-transform: uppercase; opacity: 1; } /* FF 19+ */
+TEXTAREA:-ms-input-placeholder { color: #FFFFFF; text-transform: uppercase; opacity: 1; } /* IE 10+ */
 
 INPUT:focus::-webkit-input-placeholder { color: transparent; }
 INPUT:focus:-moz-placeholder { color: transparent; } /* FF 4-18 */
@@ -123,6 +130,7 @@ TEXTAREA:focus:-moz-placeholder { color: transparent; } /* FF 4-18 */
 TEXTAREA:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 TEXTAREA:focus:-ms-input-placeholder { color: transparent; } /* IE 10+ */
 
+INPUT[type="button"],
 INPUT[type="submit"] {
   border: 0;
   border-radius: 10px;
@@ -141,35 +149,42 @@ INPUT[type="submit"] {
   -moz-transition: all 0.2s;
   transition: all 0.2s;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
 
+INPUT[type="button"]:hover,
 INPUT[type="submit"]:hover {
   background: #335B76;
   color: #CCCCCC;
 }
 
 .half-field-left-wrap {
-  float: left;
+  display: inline-block;
   width: 48%;
+  margin-right: 3.5%;
 }
 
 .half-field-right-wrap {
-  float: right;
+  display: inline-block;
   width: 48%;
 }
 
-.ninja-forms-required-items {
-  font-size: 80%;
+.nf-form-fields-required {
+  font-size: 13px;
   margin-bottom: 0.5em;
 }
 
+.ninja-forms-req-symbol,
 .lm-ninja-forms-req-symbol {
   color: #60ADE2;
 }
 
 .rmi-textarea {
-  margin: 2em 0;
+  margin: 2em 0 !important;
+}
+
+.nf-error-wrap {
+  display: none;
 }
 
 .site-width {
@@ -1586,6 +1601,12 @@ A.current-menu-item:visited,
   #menu-main-menu LI.products UL LI UL LI.product-section-header > A:active {
     color: #707070;
   }
+
+  .half-field-left-wrap,
+  .half-field-right-wrap {
+    width: 47.8%;
+  }
+
 }
 
 @media only screen and (max-width: 600px) {

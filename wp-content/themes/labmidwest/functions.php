@@ -39,4 +39,11 @@ function excerpt($limit) {
   $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
   return $excerpt;
 }
+
+// Ninja Forms
+add_filter( 'ninja_forms_i18n_front_end', 'my_custom_ninja_forms_i18n_front_end' );
+function my_custom_ninja_forms_i18n_front_end( $strings ) {
+  $strings['fieldsMarkedRequired'] = '* Required';
+  return $strings;
+}
 ?>
