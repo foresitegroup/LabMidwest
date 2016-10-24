@@ -11,16 +11,16 @@ get_header(); ?>
   while ( have_posts() ) : the_post();
   ?>
 
-    <div class="banner banner-product">
-      <div class="site-width-left">
+    <div class="banner banner-product full-width"<?php if (get_post_thumbnail_id() != "") echo " style=\"background-image: url(" . wp_get_attachment_url(get_post_thumbnail_id()) . ");\""; ?>>
+<!--  <div class="site-width-left">
         <div class="site-width-left-content">
-          <h1><?php echo get_the_title(); ?></h1>
-          <?php the_subtitle(); ?>
+          <h1><?php //echo get_the_title(); ?></h1>
+          <?php //the_subtitle(); ?>
         </div>
       </div>
-      <div class="site-width-right"<?php if (get_post_thumbnail_id() != "") echo " style=\"background-image: url(" . wp_get_attachment_url(get_post_thumbnail_id()) . ");\""; ?>>
+      <div class="site-width-right"<?php //if (get_post_thumbnail_id() != "") echo " style=\"background-image: url(" . wp_get_attachment_url(get_post_thumbnail_id()) . ");\""; ?>>
       </div>
-      <div style="clear: both;"></div>
+      <div style="clear: both;"></div> -->
     </div>
 
     <div class="site-width">

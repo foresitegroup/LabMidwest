@@ -532,6 +532,12 @@ A.lm-button:hover, A.lm-button:active {
   box-sizing: border-box;
 }
 
+.banner-product.full-width {
+  height: 280px;
+  background-size: cover;
+  background-position: center center;
+}
+
 .banner-product .site-width-left {
   width: 39.4%;
   height: 280px;
@@ -541,7 +547,7 @@ A.lm-button:hover, A.lm-button:active {
   width: 60.6%;
   height: 280px;
   background-size: cover;
-  background-position: left center;
+  background-position: center center;
 }
 
 .banner-product .site-width-left-content {
@@ -973,15 +979,13 @@ A.lm-button:hover, A.lm-button:active {
   color: #3E6F91;
 }
 
-/*#main { padding-bottom: 42px; }*/
-
 .footer-gray {
   height: 50px;
   background: #EBEBEB;
 }
 
 .footer {
-  /*margin-top: 42px;*/
+  outline: 1px solid #3E6F91; /* WTF? */
   background: #3E6F91;
   color: #EBEBEB;
   font-size: 87.5%;
