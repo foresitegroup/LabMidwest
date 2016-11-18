@@ -7,7 +7,11 @@ function register_my_menus() {
   register_nav_menus(
     array(
       'main-menu' => __( 'Main Menu' ),
-      'blog-menu' => __( 'Blog Menu' )
+      'blog-menu' => __( 'Blog Menu' ),
+      'footer-menu-col1' => __( 'Footer Menu Column 1' ),
+      'footer-menu-col2' => __( 'Footer Menu Column 2' ),
+      'footer-menu-col3' => __( 'Footer Menu Column 3' ),
+      'footer-menu-col4' => __( 'Footer Menu Column 4' )
     )
   );
 }

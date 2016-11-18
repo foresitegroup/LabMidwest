@@ -3,7 +3,7 @@
 
 <div class="footer">
   <div class="site-width">
-    <div class="col1">
+    <div class="footer-form">
       <h2>SUBSCRIBE</h2>
       Stay up to date on industry news &amp; events.<br>
       <br>
@@ -27,8 +27,28 @@
       <!-- End TEMP MailChimp code  !!!REPLACE WITH REAL CODE!!! -->
     </div>
 
-    <div class="col2">
-      <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+    <div class="footer-menu">
+      <div class="footer-menu-col">
+        <?php wp_nav_menu( array( 'theme_location' => 'footer-menu-col1' ) ); ?>
+      </div>
+
+      <div class="footer-menu-col">
+        <?php wp_nav_menu( array( 'theme_location' => 'footer-menu-col2' ) ); ?>
+      </div>
+
+      <div class="footer-menu-col">
+        <?php wp_nav_menu( array( 'theme_location' => 'footer-menu-col3' ) ); ?>
+      </div>
+
+      <div class="footer-menu-col">
+        <?php wp_nav_menu( array( 'theme_location' => 'footer-menu-col4' ) ); ?>
+        
+        <br>
+
+        <a href="#" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" class="social"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="#" class="social"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+      </div>
     </div>
 
     <div style="clear: both;"></div>
