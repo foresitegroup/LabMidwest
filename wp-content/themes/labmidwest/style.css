@@ -581,6 +581,14 @@ A.lm-button:hover, A.lm-button:active {
   background-position: center center;
 }
 
+.banner-category .site-width-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 39.4%;
+  height: 100%;
+}
+
 .banner-product .site-width-left-content {
   width: 340px;
   height: inherit;
@@ -599,6 +607,52 @@ A.lm-button:hover, A.lm-button:active {
   line-height: 0.9em;
   margin-bottom: 0.3em;
 }
+
+.banner-category {
+  height: auto;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.banner-category .site-width-left {
+  width: 66.35%;
+  height: auto;
+  padding: 2em 0;
+}
+
+.banner-category .site-width-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 33.65%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.banner-category .site-width-left-content {
+  width: 745px;
+  height: inherit;
+  font-size: 17px;
+  line-height: 1.8em;
+  coor: #EBEBEB;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-category H1 {
+  color: #EBEBEB;
+  font-size: 45px;
+  line-height: 0.9em;
+  margin-bottom: 0.3em;
+}
+
+
+
+
+
+
 
 .banner-news,
 .banner-news-single {
@@ -1385,6 +1439,10 @@ A.current-menu-item:visited,
   font-size: 125%;
 }
 
+#rmi.rmi-category {
+  background: #142430;
+}
+
 #rmi .ninja-forms-required-items {
   font-size: 60%;
 }
@@ -1394,9 +1452,17 @@ A.current-menu-item:visited,
   margin-bottom: 3em;
 }
 
+#rmi.rmi-category .rmi-header {
+  color: #60ADE2;
+}
+
 .rmi-header H2 {
   font-size: 180%;
   margin-bottom: 1em;
+}
+
+#rmi.rmi-category .rmi-header H2 {
+  color: #FFFFFF;
 }
 
 .contact-form {
@@ -1513,6 +1579,48 @@ A.current-menu-item:visited,
 .services-form {
   padding: 4em 0;
 }
+
+.category-section {
+  padding: 5em 0;
+  line-height: 1.6em;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.category-section H2 {
+  font-size: 34px;
+  text-decoration: underline;
+  margin-bottom: 0.75em;
+}
+
+.category-manufacturers {
+  padding: 4em 0;
+  background: #EBEBEB;
+  text-align: center;
+}
+
+.category-manufacturers H3 {
+  color: #0C3147;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: underline;
+  margin-bottom: 2em;
+}
+
+.category-manufacturers A {
+  width: 18%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  margin: 3%;
+}
+
+.category-manufacturers A IMG {
+  max-width: 100%;
+  height: auto;
+  text-decoration: none;
+}
+
 
 
 @media only screen and (max-width: 800px) {
