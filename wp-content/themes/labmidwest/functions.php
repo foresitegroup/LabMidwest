@@ -44,6 +44,13 @@ function excerpt($limit) {
   return $excerpt;
 }
 
+// Wrap video embed code in DIV for responsive goodness
+add_filter( 'embed_oembed_html', 'my_oembed_filter', 10, 4 ) ;
+function my_oembed_filter($html, $url, $attr, $post_ID) {
+  $return = '<div class="video">'.$html.'</div>';
+  return $return;
+}
+
 // Ninja Forms
 add_filter( 'ninja_forms_i18n_front_end', 'my_custom_ninja_forms_i18n_front_end' );
 function my_custom_ninja_forms_i18n_front_end( $strings ) {
