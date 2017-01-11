@@ -45,9 +45,8 @@
         
         <br>
 
-        <a href="#" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="#" class="social"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-        <a href="#" class="social"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+        <!-- <a href="#" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a> -->
+        <a href="https://www.linkedin.com/company/7582826" class="social"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
       </div>
     </div>
 

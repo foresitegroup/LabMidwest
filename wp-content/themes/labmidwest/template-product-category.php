@@ -43,7 +43,7 @@ get_header(); ?>
     <div class="site-width">
       <div class="rmi-header">
         <h2>FOR MORE INFORMATION</h2>
-        Contact us directly at (888) 123-4567 or fill out the form below.
+        Contact us directly at (414) 258-6415 or fill out the form below.
       </div>
 
       <?php if(function_exists('ninja_forms_display_form')){ ninja_forms_display_form(5); } ?>

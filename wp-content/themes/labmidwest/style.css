@@ -550,6 +550,7 @@ A.lm-button:hover, A.lm-button:active {
   line-height: 1.35em;
   margin-bottom: 0;
   background-position: center center;
+  background-size: cover;
 }
 
 .banner-contact .site-width {
@@ -557,7 +558,7 @@ A.lm-button:hover, A.lm-button:active {
   box-sizing: border-box;
 }
 
-.banner-services {
+/*.banner-services {
   font-size: 22px;
   line-height: 1.5em;
   color: #EBEBEB;
@@ -568,10 +569,10 @@ A.lm-button:hover, A.lm-button:active {
   line-height: 1em;
   color: #FFFFFF;
   margin-bottom: 0.4em;
-}
+}*/
 
 .banner-services SPAN {
-  color: #000317;
+  /*color: #000317;*/
   font-weight: bold;
   margin-left: 1em;
 }
@@ -581,13 +582,15 @@ A.lm-button:hover, A.lm-button:active {
   margin-left: 0;
 }
 
-.banner-services SPAN:first-of-type:before,
+/*.banner-services SPAN:first-of-type:before,*/
 .banner-services SPAN:nth-of-type(4):before {
   content: "\A";
   white-space: pre;
 }
 
-.banner-products {
+.banner-services,
+.banner-products,
+.banner-events {
   height: auto;
   padding: 5em 0;
   font-size: 17px;
@@ -595,7 +598,9 @@ A.lm-button:hover, A.lm-button:active {
   color: #EBEBEB;
 }
 
-.banner-products H1 {
+.banner-services H1,
+.banner-products H1,
+.banner-events H1 {
   font-size: 45px;
   line-height: 1em;
   color: #EBEBEB;
@@ -697,12 +702,14 @@ A.lm-button:hover, A.lm-button:active {
 .banner-news {
   width: 100%;
   height: 137px;
-  background: #26455A;
+  /*background: #26455A;*/
   font-weight: 300;
   font-size: 112.5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: url(images/banner-map.jpg) center center no-repeat;
+  background-size: cover;
 }
 
 .banner-news A:link,
@@ -1963,6 +1970,10 @@ A.current-menu-item:visited,
   .banner-services SPAN:nth-of-type(5):before {
     content: "\A";
     white-space: pre;
+  }
+
+  .services-form {
+    width: 92%;
   }
 }
 
