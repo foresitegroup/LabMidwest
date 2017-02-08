@@ -47,6 +47,14 @@ H1, H2, H3, H4, H5 {
   margin: 0;
 }
 
+H1.first-letter:first-letter,
+H2.first-letter:first-letter,
+H3.first-letter:first-letter,
+H4.first-letter:first-letter,
+H5.first-letter:first-letter {
+  text-transform: lowercase;
+}
+
 H1 {
   font-size: 26px;
   line-height: 1em;
@@ -75,6 +83,24 @@ H5 {
 UL, OL {
   margin: 0 0 0 0.7em;
   padding: 0 0 0 0.7em;
+}
+
+UL.two-col {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+UL.two-col LI {
+  margin-bottom: 0.5em;
+}
+
+UL.two-col LI:before {
+  content: "•";
+  padding-right: 0.5em;
 }
 
 HR {
@@ -679,7 +705,7 @@ A.lm-button:hover, A.lm-button:active {
   height: inherit;
   font-size: 17px;
   line-height: 1.8em;
-  coor: #EBEBEB;
+  color: #EBEBEB;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1405,7 +1431,8 @@ A.lm-button:hover, A.lm-button:active {
   line-height: 1em;
 }
 
-.product-info H2 {
+.product-info H2,
+H2.extra-product-info {
   font-size: 162.5%;
   font-weight: normal;
   margin-bottom: 0.5em;
@@ -1470,6 +1497,10 @@ A.current-menu-item:visited,
   float: right;
 }
 
+.blog-entry:nth-of-type(3n+3) {
+  margin-right: 0;
+}
+
 .blog-entry:link,
 .blog-entry:visited {
   margin-bottom: 3em;
@@ -1479,7 +1510,7 @@ A.current-menu-item:visited,
 }
 
 .blog-entry H2 {
-  font-size: 34px;
+  font-size: 29px;
   font-weight: normal;
   margin-bottom: 0.7em;
 }
@@ -1644,7 +1675,8 @@ A.current-menu-item:visited,
 }
 
 .contact-prefooter {
-  background: #213B4D;
+  background: #213B4D url(images/contact-prefooter.jpg) no-repeat center top;
+  background-size: cover;
   color: #EBEBEB;
   font-size: 137.5%;
   line-height: 1.8em;
@@ -1723,6 +1755,11 @@ A.current-menu-item:visited,
   max-width: 100%;
   height: auto;
   text-decoration: none;
+}
+
+.category-manufacturers A IMG.tall {
+  max-height: 100px;
+  width: auto;
 }
 
 .upcoming-events {
@@ -1853,7 +1890,49 @@ A.current-menu-item:visited,
   margin: 3em 0;
 }
 
+.youtube {
+  display: block;
+  width: 100%;
+  padding-top: 75.29%;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
 
+.youtube:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.youtube:after {
+  font-family: "FontAwesome";
+  content: "\f01d";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: rgba(255,255,255,0.5);
+  font-size: 150px;
+  line-height: 1em;
+}
+
+.youtube:hover:after {
+  color: rgba(255,255,255,1);
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .banner-category .site-width-left-content {
+    width: 100%;
+    padding-left: 2%;
+    box-sizing: border-box;
+  }
+}
 
 @media only screen and (max-width: 800px) {
   /* Small computer or landscape tablet */
@@ -1947,6 +2026,15 @@ A.current-menu-item:visited,
     margin-left: 0;
   }
 
+  .blog-entry.one-third {
+    width: 48%;
+    margin-right: 4%;
+  }
+
+  .blog-entry.one-third:nth-of-type(even) {
+    margin-right: 0;
+  }
+
   .banner-product .site-width-left-content {
     width: 100%;
     padding: 0 5%;
@@ -1974,6 +2062,20 @@ A.current-menu-item:visited,
 
   .services-form {
     width: 92%;
+  }
+
+  .banner-category .site-width-left {
+    width: 100%;
+  }
+
+  .banner-category .site-width-right {
+    position: static;
+    width: 100%;
+    height: 350px;
+  }
+
+  .category-manufacturers A IMG.tall {
+    max-height: 70px;
   }
 }
 
@@ -2077,6 +2179,12 @@ A.current-menu-item:visited,
 
 @media only screen and (max-width: 600px) {
   /* Small tablet */
+  UL.two-col {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
+
   .one-fourth {
     width: 48%;
     margin: 0 4% 3em 0;
@@ -2288,6 +2396,14 @@ A.current-menu-item:visited,
   .products-man .prod-man:nth-child(2n+2) {
     margin-right: 0;
   }
+
+  .category-manufacturers A IMG.tall {
+    max-height: 50px;
+  }
+
+  #rmi .site-width {
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -2464,5 +2580,9 @@ A.current-menu-item:visited,
     float: none;
     width: 100% !important;
     margin: 0.5em 0;
+  }
+
+  .category-manufacturers A IMG.tall {
+    max-height: 35px;
   }
 }

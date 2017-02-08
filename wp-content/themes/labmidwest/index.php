@@ -33,7 +33,7 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<?php
-			$count = 1;
+			// $count = 1;
 			// Start the loop.
 			while ( have_posts() ) : the_post();
 
@@ -49,7 +49,7 @@ get_header(); ?>
 					get_template_part( 'content-blog-single', get_post_format() );
 				endif;
         
-				if ($count == 3) { echo "<div style=\"clear: both;\"></div>"; $count = 1; } else { $count++; }
+				// if ($count == 3) { echo "<div style=\"clear: both;\"></div>"; $count = 1; } else { $count++; }
 
 			// End the loop.
 			endwhile;
