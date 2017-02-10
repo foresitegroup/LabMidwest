@@ -39,7 +39,7 @@
 <div class="topbar">
   <div class="site-width">
     (414) 258.6415 &nbsp; | &nbsp; 
-    <!-- <a href="#" class="fa-stack"><i class="fa fa-square fa-stack-1x"></i><i class="fa fa-facebook-square fa-stack-1x"></i></a> -->
+    <a href="https://www.facebook.com/labmidwest/" class="fa-stack"><i class="fa fa-square fa-stack-1x"></i><i class="fa fa-facebook-square fa-stack-1x"></i></a>
     <a href="https://www.linkedin.com/company/7582826" class="fa-stack"><i class="fa fa-square fa-stack-1x"></i><i class="fa fa-linkedin-square fa-stack-1x"></i></a>
   </div>
 </div>

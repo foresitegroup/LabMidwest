@@ -74,7 +74,7 @@
 
   <div class="one-half last">
     <h3>UPCOMING EVENTS</h3>
-    <?php echo do_shortcode('[my_calendar_upcoming type="event" template="<div class=fg-event-date><span>{eventday}</span></div><div class=fg-event-details><h5>{daterange}</h5>{title}</div>" show_today="yes"]'); ?>
+    <?php echo do_shortcode('[my_calendar_upcoming before="0" after="2" type="event" template="<div class=fg-event-date><span>{eventday}</span></div><div class=fg-event-details><h5>{daterange}</h5>{title}</div>" show_today="yes"]'); ?>
     <a href="events" class="lm-button">VIEW ALL EVENTS</a>
   </div>
 </div>

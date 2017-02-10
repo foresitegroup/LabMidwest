@@ -14,7 +14,7 @@
       <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-78" method="post" data-id="78" data-name="Default sign-up form" >
         <div class="mc4wp-form-fields">
           <input type="email" name="EMAIL" placeholder="Email Address" required="required">
-          <input type="submit" value="SUBMIT">
+          <input type="submit" value="SUBMIT" disabled>
           <div style="display: none;">
             <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" />
           </div>
@@ -45,7 +45,7 @@
         
         <br>
 
-        <!-- <a href="#" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a> -->
+        <a href="https://www.facebook.com/labmidwest/" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
         <a href="https://www.linkedin.com/company/7582826" class="social"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
       </div>
     </div>
