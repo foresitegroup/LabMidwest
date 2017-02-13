@@ -262,6 +262,11 @@ INPUT[type="submit"]:hover {
   margin-right: 5%;
 }
 
+.content-area .one-third {
+  float: none;
+  display: inline-block;
+}
+
 .two-third {
   float: left;
   width: 65%;
