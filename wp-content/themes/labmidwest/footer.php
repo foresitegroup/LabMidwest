@@ -8,23 +8,28 @@
       Stay up to date on industry news &amp; events.<br>
       <br>
 
-      <!-- Begin TEMP MailChimp code  !!!REPLACE WITH REAL CODE!!! -->
-      <script type="text/javascript">!function(){window.mc4wp||(window.mc4wp={listeners:[],forms:{on:function(n,w){window.mc4wp.listeners.push({event:n,callback:w})}}})}();</script>
-      <!-- MailChimp for WordPress v3.0.12 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
-      <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-78" method="post" data-id="78" data-name="Default sign-up form" >
-        <div class="mc4wp-form-fields">
-          <input type="email" name="EMAIL" placeholder="Email Address" required="required">
-          <input type="submit" value="SUBMIT" disabled>
-          <div style="display: none;">
-            <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" />
+      <!-- Begin MailChimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form action="//labmidwest.us3.list-manage.com/subscribe/post?u=0a4c9e5c39e55cdc38cda3b97&amp;id=fbe781d09c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group">
+              <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="EMAIL ADDRESS">
+            </div>
+
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0a4c9e5c39e55cdc38cda3b97_fbe781d09c" tabindex="-1" value=""></div>
+
+            <div class="clear"><input type="submit" value="SUBMIT" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
           </div>
-          <input type="hidden" name="_mc4wp_timestamp" value="1453999098" />
-          <input type="hidden" name="_mc4wp_form_id" value="78" />
-          <input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" />
-        </div>
-        <div class="mc4wp-response"></div>
-      </form><!-- / MailChimp for WordPress Plugin -->
-      <!-- End TEMP MailChimp code  !!!REPLACE WITH REAL CODE!!! -->
+        </form>
+      </div>
+      <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+      <!--End mc_embed_signup-->
     </div>
 
     <div class="footer-menu">
