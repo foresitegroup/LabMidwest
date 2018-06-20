@@ -13,7 +13,7 @@ get_header(); ?>
 
     <div class="banner banner-contact"<?php if (get_post_thumbnail_id() != "") echo " style=\"background-image: url(" . wp_get_attachment_url(get_post_thumbnail_id()) . ");\""; ?>>
       <div class="site-width">
-        <?php the_subtitle(); ?>
+        <?php echo $post->fg_subtitle; ?>
       </div>
     </div>
 
@@ -30,7 +30,7 @@ get_header(); ?>
 
   <div class="contact-prefooter">
     <div class="site-width">
-      <?php echo do_shortcode('[insert page="contact-prefooter" display="content"]'); ?>
+      <?php $prefooter = get_post(144); echo $prefooter->post_content; ?>
     </div>
   </div>
 
