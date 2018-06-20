@@ -28,9 +28,6 @@ function enqueue_and_register_my_scripts(){
   wp_enqueue_script('match-height', get_stylesheet_directory_uri() . '/inc/jquery.matchHeight-min.js', array('jquery'));
 }
 
-// Don't allow Insert Pages plugin to insert a wrapper (which breaks some things)
-remove_filter( 'insert_pages_wrap_content', array( $insertPages_plugin, 'insertPages_wrap_content' ));
-
 // Home page blog excerpt
 function excerpt($limit) {
   $excerpt = explode(' ', get_the_excerpt(), $limit);
@@ -56,5 +53,82 @@ add_filter( 'ninja_forms_i18n_front_end', 'my_custom_ninja_forms_i18n_front_end'
 function my_custom_ninja_forms_i18n_front_end( $strings ) {
   $strings['fieldsMarkedRequired'] = '* Required';
   return $strings;
+}
+
+// Add subtitle field to pages
+add_action('edit_form_after_title', 'add_after_title');
+function add_after_title() {
+  global $post, $wp_meta_boxes;
+
+  do_meta_boxes(get_current_screen(), 'after_title', $post);
+
+  unset($wp_meta_boxes['post']['after_title']);
+}
+
+add_action('add_meta_boxes', 'fg_subtitle_mb');
+function fg_subtitle_mb() {
+  add_meta_box('fg_subtitle_mb', 'Annual Report PDF', 'fg_subtitle_mb_content', 'page', 'after_title', 'high');
+}
+
+function fg_subtitle_mb_content($post) {
+  $meta = get_post_meta($post->ID);
+  ?>
+  <input type="text" name="fg_subtitle" placeholder="Enter subtitle here" value="<?php if (isset($post->fg_subtitle)) echo esc_attr($post->fg_subtitle); ?>">
+  <?php
+}
+
+add_action('admin_head', 'fg_subtitle_css');
+function fg_subtitle_css() {
+  if (get_post_type() == 'page') {
+    echo '<style>
+      #fg_subtitle_mb { border: 0; background: transparent; box-shadow: none; }
+      #fg_subtitle_mb .handlediv, #fg_subtitle_mb H2 { display: none; }
+      #fg_subtitle_mb .inside { padding: 0 }
+      #fg_subtitle_mb INPUT { width: 100%; padding: 3px 8px; font-size: 1.4em; line-height: 1em; height: 1.7em; }
+    </style>';
+  }
+}
+
+add_action('save_post', 'fg_subtitle_save');
+function fg_subtitle_save($post_id) {
+  update_post_meta($post_id, 'fg_subtitle', $_POST['fg_subtitle']);
+}
+
+add_filter('manage_pages_columns', 'fg_subtitle_pages_columns');
+function fg_subtitle_pages_columns($columns) {
+  $new_columns = array();
+
+  foreach ($columns as $column => $value) {
+    $new_columns[$column] = $value;
+    if ('title' == $column) $new_columns['fg_subtitle'] = 'Subtitle';
+  }
+
+  return $new_columns;
+}
+
+add_action('manage_pages_custom_column', 'fg_subtitle_pages', 10, 2);
+function fg_subtitle_pages($column, $post_id) {
+  switch ($column) {
+    case 'fg_subtitle':
+      echo get_post_meta($post_id, 'fg_subtitle', true);
+      break;
+  }
+}
+
+// Remove visual editor on certain pages
+add_filter('user_can_richedit', 'fg_remove_visual_editor');
+function fg_remove_visual_editor($can) {
+  global $post;
+
+  if (
+    $post->ID == 15 ||
+    $post->ID == 72 ||
+    $post->ID == 88 ||
+    $post->ID == 114 ||
+    $post->ID == 144 ||
+    $post->ID == 575
+  ) return false;
+
+  return $can;
 }
 ?>
