@@ -15,7 +15,7 @@ get_header(); ?>
       <div class="site-width-left">
         <div class="site-width-left-content">
           <h1><?php echo get_the_title(); ?></h1>
-          <?php the_subtitle(); ?>
+          <?php echo $post->fg_subtitle; ?>
         </div>
       </div>
       <div class="site-width-right"<?php if (get_post_thumbnail_id() != "") echo " style=\"background-image: url(" . wp_get_attachment_url(get_post_thumbnail_id()) . ");\""; ?>>

@@ -14,7 +14,7 @@ get_header(); ?>
     <div class="banner banner-products"<?php if (get_post_thumbnail_id() != "") echo " style=\"background-image: url(" . wp_get_attachment_url(get_post_thumbnail_id()) . ");\""; ?>>
       <div class="site-width">
         <h1><?php the_title(); ?></h1>
-        <?php the_subtitle(); ?>
+        <?php echo $post->fg_subtitle; ?>
       </div>
     </div>
 
