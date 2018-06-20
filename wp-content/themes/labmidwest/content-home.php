@@ -1,7 +1,7 @@
 <div class="banner-home">
   <div class="cycle-slideshow" data-cycle-slides="> div" data-cycle-timeout="8000" data-cycle-pager-template="<span></span>">
     <p class="cycle-pager"></p>
-    <?php echo do_shortcode('[insert page="slider" display="content"]'); ?>
+    <?php $slider = get_post(72); echo $slider->post_content; ?>
   </div> <!-- END cycle-slideshow -->
 </div>
 
@@ -14,13 +14,13 @@
 <div class="home-product-video">
   <div class="site-width-left">
     <div class="site-width-left-content">
-      <?php echo do_shortcode('[insert page="featured-product" display="content"]'); ?>
+      <?php $featured = get_post(13); echo wpautop($featured->post_content); ?>
     </div>
   </div>
   <div class="site-width-right"<?php if (get_post_thumbnail_id(15) != "") echo " style=\"background-image: url(" . wp_get_attachment_url(get_post_thumbnail_id(15)) . ");\""; ?>>
     <div class="overlay"></div>
       <div class="site-width-right-content">
-        <?php echo do_shortcode('[insert page="video" display="content"]'); ?>
+        <?php $video = get_post(15); echo $video->post_content; ?>
       </div>
   </div>
   <div style="clear: both;"></div>
@@ -29,7 +29,7 @@
 <div class="home-philosophy-news">
   <div class="site-width-left" data-mh="hpn-height">
     <div class="site-width-left-content">
-      <?php echo do_shortcode('[insert page="our-philosophy" display="content"]'); ?>
+      <?php $philosophy = get_post(33); echo $philosophy->post_content; ?>
     </div>
   </div>
   <div class="site-width-right" data-mh="hpn-height">
@@ -64,11 +64,11 @@
 <div class="site-width home-prefooter">
   <div class="one-half">
     <div class="col1" data-mh="pf-height">
-      <?php echo do_shortcode('[insert page="sales-service" display="content"]'); ?>
+      <?php $sales = get_post(47); echo wpautop($sales->post_content); ?>
     </div>
 
     <div class="col2" data-mh="pf-height">
-      <?php echo do_shortcode('[insert page="request-more-information" display="content"]'); ?>
+      <?php $moreinfo = get_post(49); echo wpautop($moreinfo->post_content); ?>
     </div>
   </div>
 
