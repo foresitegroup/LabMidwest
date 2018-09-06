@@ -50,6 +50,8 @@
         <br>
 
         <a href="https://www.facebook.com/labmidwest/" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/labmidwest" class="social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/channel/UCo8PX-ezXBeecSyiQ58Sbmg" class="social"><i class="fa fa-youtube" aria-hidden="true"></i></a>
         <a href="https://www.linkedin.com/company/7582826" class="social"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
       </div>
     </div>

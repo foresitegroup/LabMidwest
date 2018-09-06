@@ -315,6 +315,8 @@ A.lm-button:hover, A.lm-button:active {
 }
 
 .topbar A:link .fa-facebook-square, A:visited .fa-facebook-square { color: #27465B; }
+.topbar A:link .fa-twitter-square, A:visited .fa-twitter-square { color: #1DA1F2; }
+.topbar A:link .fa-youtube-square, A:visited .fa-youtube-square { color: #FF0200; }
 .topbar A:link .fa-linkedin-square, A:visited .fa-linkedin-square { color: #0173B1; }
 .topbar A:link .fa-google-plus-square, A:visited .fa-google-plus-square { color: #F63C27; }
 .topbar A:hover .fa, .topbar A:active .fa { color: #707070}
@@ -1271,7 +1273,7 @@ A.lm-button:hover, A.lm-button:active {
   font-size: 18px;
   line-height: 1em;
   border-radius: 5px;
-  margin: 0.25em 0 0 0.25em;
+  margin: 0.25em 0.25em 0 0;
 }
 
 .footer A.social:hover,
@@ -1280,9 +1282,9 @@ A.lm-button:hover, A.lm-button:active {
   color: #CCCCCC;
 }
 
-.footer A.social:first-of-type {
+/*.footer A.social:first-of-type {
   margin-left: 0;
-}
+}*/
 
 .copyright {
   padding-top: 27px;
