@@ -24,8 +24,9 @@ get_header(); ?>
 			<?php if ( is_home() && ! is_front_page() ) : ?>
 			  <div class="banner banner-news">
 					<div class="site-width">
-						<?php wp_nav_menu( array( 'theme_location' => 'blog-menu' ) ); ?>
-						<a href="<?php echo home_url(); ?>/news" class="blog-home-link current-menu-item">VIEW ALL</a>
+						<?php //wp_nav_menu( array( 'theme_location' => 'blog-menu' ) ); ?>
+						<!-- <a href="<?php //echo home_url(); ?>/news" class="blog-home-link current-menu-item">VIEW ALL</a> -->
+						<h1>News</h1>
 					</div>
 				</div>
 

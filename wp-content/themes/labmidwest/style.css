@@ -634,7 +634,8 @@ A.lm-button:hover, A.lm-button:active {
 
 .banner-services H1,
 .banner-products H1,
-.banner-events H1 {
+.banner-events H1,
+.banner-news H1 {
   font-size: 45px;
   line-height: 1em;
   color: #EBEBEB;
@@ -757,6 +758,8 @@ A.lm-button:hover, A.lm-button:active {
   color: #60ADE2;
   text-decoration: underline;
 }
+
+.banner-news H1 { font-family: 'Bitter', serif; }
 
 .banner-news-single {
   height: 450px;
