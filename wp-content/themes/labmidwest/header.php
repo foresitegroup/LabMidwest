@@ -52,7 +52,7 @@
     <a href="https://www.facebook.com/labmidwest/" class="fa-stack"><i class="fa fa-square fa-stack-1x"></i><i class="fa fa-facebook-square fa-stack-1x"></i></a>
     <a href="https://twitter.com/labmidwest" class="fa-stack"><i class="fa fa-square fa-stack-1x"></i><i class="fa fa-twitter-square fa-stack-1x"></i></a>
     <a href="https://www.youtube.com/channel/UCo8PX-ezXBeecSyiQ58Sbmg" class="fa-stack"><i class="fa fa-square fa-stack-1x"></i><i class="fa fa-youtube-square fa-stack-1x"></i></a>
-    <a href="https://www.linkedin.com/company/7582826" class="fa-stack"><i class="fa fa-square fa-stack-1x"></i><i class="fa fa-linkedin-square fa-stack-1x"></i></a>
+    <a href="https://www.linkedin.com/company/lab-midwest/" class="fa-stack"><i class="fa fa-square fa-stack-1x"></i><i class="fa fa-linkedin-square fa-stack-1x"></i></a>
   </div>
 </div>
 
