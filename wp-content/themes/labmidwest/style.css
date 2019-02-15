@@ -412,7 +412,12 @@ A.lm-button:hover, A.lm-button:active {
 #menu-main-menu LI.products UL {
   margin: 0;
   padding: 1.5em 0 1.5em 1em;
-  left: 0.5em;
+  /*left: 0.5em;*/
+}
+
+#menu-main-menu LI.products > UL {
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #menu-main-menu LI.products UL LI {
@@ -2156,6 +2161,7 @@ A.current-menu-item:visited,
   #menu-main-menu LI.products UL {
     position: static;
     width: 100% !important;
+    transform: none;
   }
 
   #menu-main-menu LI.products UL LI {
