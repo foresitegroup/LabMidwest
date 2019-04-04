@@ -244,6 +244,12 @@ INPUT[type="submit"]:hover {
   clear: both;
 }
 
+.one-fifth {
+  float: left;
+  width: 18.4%;
+  margin-right: 2%;
+}
+
 .one-fourth {
   float: left;
   width: 22.75%;
@@ -273,6 +279,7 @@ INPUT[type="submit"]:hover {
   margin-right: 5%;
 }
 
+.one-fifth.last,
 .one-fourth.last,
 .one-half.last,
 .one-third.last,
@@ -437,6 +444,7 @@ A.lm-button:hover, A.lm-button:active {
   padding-right: 0;
 }
 
+#menu-main-menu LI.products UL LI.column0 > A,
 #menu-main-menu LI.products UL LI.column1 > A,
 #menu-main-menu LI.products UL LI.column2 > A,
 #menu-main-menu LI.products UL LI.column3 > A {
@@ -800,7 +808,8 @@ A.lm-button:hover, A.lm-button:active {
 }
 
 .home-content H5 {
-  margin-bottom: 0.9em;
+  /*margin-bottom: 0.9em;*/
+  min-height: 2em;
 }
 
 .home-content P {
@@ -1254,6 +1263,7 @@ A.lm-button:hover, A.lm-button:active {
   text-transform: none;
 }
 
+.footer .menu LI.products UL LI.column0 > A,
 .footer .menu LI.products UL LI.column1 > A,
 .footer .menu LI.products UL LI.column2 > A,
 .footer .menu LI.products UL LI.column3 > A {
@@ -1950,12 +1960,12 @@ A.current-menu-item:visited,
   }
 }
 
+@media only screen and (max-width: 1040px) {
+  .site-width { width: 96%; }
+}
+
 @media only screen and (max-width: 800px) {
   /* Small computer or landscape tablet */
-  .site-width {
-    width: 96%;
-  }
-
   .site-width IMG {
     max-width: 100%;
     height: auto;
@@ -1978,8 +1988,9 @@ A.current-menu-item:visited,
     padding: 50px 4% 0 0;
   }
 
-  .home-content H5 {
-    min-height: 2em;
+  .home-content .one-fifth {
+    width: 30%;
+    margin: 2em 1.5%;
   }
 
   .home-product-video .site-width-left-content,
@@ -2232,8 +2243,13 @@ A.current-menu-item:visited,
     background-position: center center;
   }
 
+  .home-content .one-fifth {
+    width: 47%;
+    margin: 2em 1.5%;
+  }
+
   .home-content H5 {
-    margin-bottom: 0;
+    min-height: 0;
   }
 
   .banner-home .site-width-left-content {
@@ -2425,10 +2441,12 @@ A.current-menu-item:visited,
 
 @media only screen and (max-width: 480px) {
   /* Phone */
+  .one-fifth,
   .one-fourth,
   .one-half,
   .one-third,
   .two-third,
+  .one-fifth.last,
   .one-fourth.last,
   .one-half.last,
   .one-third.last,
@@ -2451,6 +2469,11 @@ A.current-menu-item:visited,
 
   .banner-home .site-width-right {
     height: 212px;
+  }
+
+  .home-content .one-fifth {
+    width: 100%;
+    margin: 3em 0;
   }
   
   .home-product-video {
