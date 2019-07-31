@@ -425,6 +425,7 @@ A.lm-button:hover, A.lm-button:active {
 #menu-main-menu LI.products > UL {
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
 }
 
 #menu-main-menu LI.products UL LI {
@@ -434,6 +435,8 @@ A.lm-button:hover, A.lm-button:active {
   padding: 0 1em;
 }
 
+#menu-main-menu LI.products UL LI.column0 { padding-right: 2em; }
+
 #menu-main-menu LI.products UL LI.column2 {
   border-right: 1px solid #3E6F91;
   padding-right: 2em;
@@ -441,7 +444,7 @@ A.lm-button:hover, A.lm-button:active {
 
 #menu-main-menu LI.products UL LI.column3 {
   padding-left: 2em;
-  padding-right: 0;
+  padding-right: 2em;
 }
 
 #menu-main-menu LI.products UL LI.column0 > A,
@@ -2151,13 +2154,17 @@ A.current-menu-item:visited,
   #menu-main-menu LI:hover UL {
     position: static;
     background: #FFFFFF;
-    padding: 0;
+    /*padding: 0;*/
   }
 
   #menu-main-menu LI UL LI,
   #menu-main-menu LI UL LI:first-child {
-    padding: 0.4em 0 0;
+    padding: 0;
   }
+
+  #menu-main-menu LI.products UL { padding: 0; }
+
+  #menu-main-menu LI.products UL LI.column0 { padding-right: 0; }
 
   #menu-main-menu LI UL LI A:link,
   #menu-main-menu LI UL LI A:visited {
@@ -2173,6 +2180,8 @@ A.current-menu-item:visited,
     position: static;
     width: 100% !important;
     transform: none;
+    display: block;
+    float: none;
   }
 
   #menu-main-menu LI.products UL LI {
