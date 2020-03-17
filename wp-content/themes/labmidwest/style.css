@@ -338,16 +338,22 @@ A.lm-button:hover, A.lm-button:active {
 }
 
 .logo-menu {
-  height: 98px;
+  /*height: 98px;*/
+  height: 150px;
   position: relative;
 }
 
+#ajaxsearchlite1 { float: right; }
+
 #logo {
   position: absolute;
-  top: 0;
+  top: -35px;
   left: 0;
   z-index: 100;
+  width: 171px;
 }
+
+#logo IMG { max-width: 100%; height: auto; }
 
 #menu-toggle,
 #show-menu {
